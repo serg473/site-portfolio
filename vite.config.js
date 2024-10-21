@@ -11,4 +11,8 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    minify: "esbuild", // Минификация JavaScript
+    cssMinify: "lightningcss", // Минификация CSS с использованием Lightning CSS
+  },
 });
