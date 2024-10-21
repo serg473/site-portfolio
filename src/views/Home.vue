@@ -2,6 +2,7 @@
 import SectionTitle from '@/components/SectionTitle.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
 import { useStore } from '@/stores/portfolio';
+import { getImagePath } from '@/utils';
 const store = useStore();
 </script>
 
@@ -92,7 +93,7 @@ const store = useStore();
   </section>
   <section class="py-16">
     <div class="flex flex-col items-center mx-auto w-full max-w-7xl  px-4 md:gap-12 md:px-8">
-      <SectionTitle class=" mb-4">Skills</SectionTitle>
+      <SectionTitle class="mb-4">Skills</SectionTitle>
       <span class="text-center text-[18px] leading-[156%] text-gray-600">The skills, tools and technologies I am really
         good
         at:</span>
@@ -117,7 +118,9 @@ const store = useStore();
         <div class="flex flex-col gap-6">
           <div v-for="experience in store.experience" :key="`Experience_${experience.id}`"
             class="rounded-xl bg-gray shadow-md dark:bg-gray-100 dark:shadow-2xl mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
-            <img loading="lazy" :src="experience?.name" :alt="experience?.name">
+            <a target="_blank" :href="experience?.link">
+              <img loading="lazy" decoding="async" :src="experience?.name" :alt="experience?.name">
+            </a>
             <div class="font-normal text-base leading-[150%]">
               <span class="text-gray-700">{{ experience?.startDate }} - {{ experience?.endDate }}</span>
               <h4 class="my-4 font-semibold text-[18px] leading-[156%] text-gray-900">{{ experience?.position }}</h4>
@@ -127,6 +130,39 @@ const store = useStore();
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16">
+    <div class="flex flex-col items-center mx-auto w-full max-w-7xl  px-4 md:gap-12 md:px-8">
+      <SectionTitle class="mb-4">Work</SectionTitle>
+      <span class="text-center text-[18px] leading-[156%] text-gray-600">Some of the noteworthy projects I have
+        built:</span>
+      <div v-for="skill in store.work" :key="skill.name"
+        class="rounded-xl mt-6 bg-gray shadow-md dark:bg-gray-100 dark:shadow-2xl mx-auto flex w-full max-w-6xl flex-col md:flex-row">
+        <div
+          class="flex items-center justify-center border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12 md:rounded-l-xl md:border-r">
+          <a target="_blank" :href="skill?.link">
+            <img :src="getImagePath(skill?.imageURL)" alt="Work" loading="lazy" decoding="async"
+              class="h-[180px] rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105" </a>
+        </div>
+        <div class="mt-6 flex flex-col gap-6 p-8 md:w-1/2 lg:p-12">
+          <p class="text-lg md:text-xl font-semibold text-gray-900">{{ skill?.name }}</p>
+          <p class="text-normal text-base">{{ skill?.description }}</p>
+          <div class="flex flex-wrap gap-2">
+            <div v-for="stack in skill?.skills" :key="stack"
+              class="flex items-center justify-center rounded-xl bg-gray-200 px-5 py-1">
+              <p class="text-normal text-sm font-medium">{{ stack }}</p>
+            </div>
+          </div><a target="_blank" class="self-start rounded-lg p-1.5 hover:bg-gray-50 [&amp;_svg]:stroke-gray-500"
+            :href="skill?.link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-external-link">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" x2="21" y1="14" y2="3"></line>
+            </svg></a>
         </div>
       </div>
     </div>

@@ -38,6 +38,7 @@ export const useStore = defineStore("portfolio", {
         {
           id: 1,
           name: "https://genshtab.by/upload/CPriority/43f/43f02653a9454d321a2c36f0b9dc05b7.svg",
+          link: "https://genshtab.by/",
           startDate: "01.08.2021",
           endDate: "22.02.2023",
           position: "Frontend developer",
@@ -51,6 +52,7 @@ export const useStore = defineStore("portfolio", {
         {
           id: 2,
           name: "https://belaruskali.by/i/logo.png",
+          link: "https://belaruskali.by/",
           startDate: "13.03.2023",
           endDate: "11.12.2023",
           position: "Frontend developer",
@@ -58,6 +60,35 @@ export const useStore = defineStore("portfolio", {
             "responsive layout from scratch",
             "developing web applications from scratch in Vue 2/Vue 3, Pinia, Tailwind css",
           ],
+        },
+      ],
+      work: [
+        {
+          id: 1,
+          name: "Ministry of Antimonopoly Regulation and Trade of the Republic of Belarus",
+          imageURL: "portfolio/mart.webp",
+          link: "https://www.mart.gov.by/",
+          description:
+            "Information portal designed to view news, citizens of the Republic of Belarus to the Ministry through the feedback form, search for relevant information on trade and services, protection of consumer rights, etc.",
+          skills: ["React", "React-router", "Redux", "Bootstrap 5", "Git"],
+        },
+        {
+          id: 2,
+          name: "Ministry of Antimonopoly Regulation and Trade of the Republic of Belarus",
+          imageURL: "portfolio/mart.webp",
+          link: "https://www.mart.gov.by/",
+          description:
+            "Information portal designed to view news, citizens of the Republic of Belarus to the Ministry through the feedback form, search for relevant information on trade and services, protection of consumer rights, etc.",
+          skills: ["React", "React-router", "Redux", "Bootstrap 5", "Git"],
+        },
+        {
+          id: 3,
+          name: "Ministry of Antimonopoly Regulation and Trade of the Republic of Belarus",
+          imageURL: "portfolio/mart.webp",
+          link: "https://www.mart.gov.by/",
+          description:
+            "Information portal designed to view news, citizens of the Republic of Belarus to the Ministry through the feedback form, search for relevant information on trade and services, protection of consumer rights, etc.",
+          skills: ["React", "React-router", "Redux", "Bootstrap 5", "Git"],
         },
       ],
     };
