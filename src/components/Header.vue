@@ -12,14 +12,17 @@ const isModal = ref(false)
                 <button class="md:hidden" @click="isModal = true">
                     <SvgIcon name="burger" />
                 </button>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between gap-12">
                     <div>
                         <MenuList />
                     </div>
-                    <div class="flex">
+                    <div class="flex gap-4">
                         <button>
                             <SvgIcon name="ThemeLight" />
                         </button>
+                        <button
+                            class="inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-1.5 font-medium text-gray-50 transition-colors duration-200 hover:bg-gray-700 active:bg-gray-800">Download
+                            CV</button>
                     </div>
                 </div>
             </div>
@@ -34,12 +37,9 @@ const isModal = ref(false)
                         <h3 class="text-2xl md:text-3xl tracking-[-0.02em] text-gray-900 font-bold">&lt;DS /&gt;</h3>
                         <button
                             class="relative flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&amp;_svg]:stroke-gray-600 [&amp;_svg]:hover:stroke-gray-700 [&amp;_svg]:w-6 [&amp;_svg]:h-6"
-                            type="button" @click="isModal = false"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
-                                <path d="M18 6 6 18"></path>
-                                <path d="m6 6 12 12"></path>
-                            </svg></button>
+                            type="button" @click="isModal = false">
+                            <SvgIcon name="BurgerClose" />
+                        </button>
                     </div>
                     <div class="border-b border-gray-100 p-4">
                         <MenuList />
@@ -50,7 +50,8 @@ const isModal = ref(false)
                                 class="relative flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&amp;_svg]:stroke-gray-600 [&amp;_svg]:hover:stroke-gray-700 [&amp;_svg]:w-6 [&amp;_svg]:h-6">
                                 <SvgIcon name="Theme" />
                             </button>
-                        </div><button
+                        </div>
+                        <button
                             class="inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-1.5 font-medium text-gray-50 transition-colors duration-200 hover:bg-gray-700 active:bg-gray-800">Download
                             CV</button>
                     </div>
