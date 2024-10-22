@@ -1,4 +1,5 @@
 <script setup>
+import ExperienceList from '@/components/ExperienceList.vue';
 import SectionTitle from '@/components/SectionTitle.vue';
 import SkillsList from '@/components/SkillsList.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
@@ -114,7 +115,7 @@ const store = useStore();
         <SectionTitle class="mb-4">Experience</SectionTitle>
         <span class="text-center text-[18px] leading-[156%] text-gray-600">Here is a quick summary of my most recent
           experiences:</span>
-        
+        <ExperienceList />
       </div>
     </div>
   </section>
