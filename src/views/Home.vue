@@ -1,5 +1,6 @@
 <script setup>
 import SectionTitle from '@/components/SectionTitle.vue';
+import SkillsList from '@/components/SkillsList.vue';
 import SvgIcon from '@/components/SvgIcon.vue';
 import { useStore } from '@/stores/portfolio';
 import { getImagePath } from '@/utils';
@@ -104,16 +105,7 @@ const store = useStore();
       <span class="text-center text-[18px] leading-[156%] text-gray-600">The skills, tools and technologies I am really
         good
         at:</span>
-      <div
-        class="mt-6 w-full justify-center grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
-        <div v-for="skill in store?.skills" :key="skill?.name" class="flex flex-col items-center gap-2">
-          <a target="_blank" :href="skill?.link">
-            <SvgIcon :name="skill?.name" />
-          </a>
-          <span class="text-base leading-[150%] text-gray-600">{{ skill?.name }}</span>
-        </div>
-
-      </div>
+      <SkillsList />
     </div>
   </section>
   <section class="py-16 bg-gray-50">
@@ -122,22 +114,7 @@ const store = useStore();
         <SectionTitle class="mb-4">Experience</SectionTitle>
         <span class="text-center text-[18px] leading-[156%] text-gray-600">Here is a quick summary of my most recent
           experiences:</span>
-        <div class="flex flex-col gap-6">
-          <div v-for="experience in store.experience" :key="`Experience_${experience.id}`"
-            class="rounded-xl bg-gray shadow-md dark:bg-gray-100 dark:shadow-2xl mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
-            <a target="_blank" :href="experience?.link">
-              <img loading="lazy" decoding="async" :src="experience?.name" :alt="experience?.name">
-            </a>
-            <div class="font-normal text-base leading-[150%]">
-              <span class="text-gray-700">{{ experience?.startDate }} - {{ experience?.endDate }}</span>
-              <h4 class="my-4 font-semibold text-[18px] leading-[156%] text-gray-900">{{ experience?.position }}</h4>
-              <ul class="list-disc pl-7 flex flex-col gap-2">
-                <li class="text-base leading-[150%] text-gray-600" v-for="subExp in experience?.responsibilities"
-                  :key="subExp">{{ subExp }}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
