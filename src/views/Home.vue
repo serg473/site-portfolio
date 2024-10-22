@@ -2,7 +2,9 @@
 import ExperienceList from '@/components/ExperienceList.vue';
 import SectionTitle from '@/components/SectionTitle.vue';
 import SkillsList from '@/components/SkillsList.vue';
-import WorkList from '@/components/WorkList.vue';
+import { defineAsyncComponent } from 'vue';
+
+const WorkList = defineAsyncComponent(() => import('../components/WorkList.vue'));
 </script>
 
 <template>
