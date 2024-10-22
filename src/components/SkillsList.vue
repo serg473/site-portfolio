@@ -1,6 +1,6 @@
 <script setup>
 import SkillsListItem from '@/components/SkillsListItem.vue';
-import { useStore } from '@/stores/portfolio';
+import { useStore } from '@/assets/img/portfolio';
 const store = useStore();
 </script>
 <template>

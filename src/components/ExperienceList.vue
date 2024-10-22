@@ -1,5 +1,5 @@
 <script setup>
-import { useStore } from '@/stores/portfolio';
+import { useStore } from '@/assets/img/portfolio';
 import ExperienceListItem from './ExperienceListItem.vue';
 const store = useStore();
 
