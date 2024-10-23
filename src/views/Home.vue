@@ -73,31 +73,36 @@ const WorkList = defineAsyncComponent(() => import('../components/WorkList.vue')
 
     </div>
   </section>
+
   <section class="bg-gray-50 py-16">
     <div class="flex flex-col items-center mx-auto w-full max-w-7xl  px-4 md:gap-12 md:px-8">
       <SectionTitle>About me</SectionTitle>
-      <article class="mt-6 flex flex-col items-center">
+      <article class="mt-6 md:mt-0 w-full flex flex-col md:flex-row md:gap-48 md:justify-between items-center md:items-start">
         <img class="mb-12" loading="lazy" decoding="async" align="center" src="../assets/img/photo.webp" alt="About Me">
-        <h3 class="mb-6 font-semibold text-2xl leading-[133%] tracking-tight text-gray-900">Curious about me? Here you
-          have
-          it:</h3>
-        <div class="flex flex-col gap-4 text-base leading-[150%] text-gray-600">
-          <p>I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js).
-            I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User
-            experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.</p>
-          <p>I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a
-            developer, taking on new challenges and learning the latest technologies along the way. Now, in my early
-            thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications
-            using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
-          <p>
-            I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to
-            development.
-          </p>
-          <p>
-            When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker,
-            witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I
-            share tech-related bites and build in public, or you can follow me on GitHub.
-          </p>
+        <div class="flex flex-col">
+          <h3 class="mb-6 font-semibold text-2xl leading-[133%] tracking-tight text-gray-900">Curious about me? Here you
+            have
+            it:</h3>
+          <div class="flex flex-col gap-4 text-base leading-[150%] text-gray-600">
+            <p>I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js &
+              Node.js).
+              I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User
+              experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.</p>
+            <p>I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a
+              developer, taking on new challenges and learning the latest technologies along the way. Now, in my early
+              thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications
+              using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
+            <p>
+              I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way
+              to
+              development.
+            </p>
+            <p>
+              When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker,
+              witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I
+              share tech-related bites and build in public, or you can follow me on GitHub.
+            </p>
+          </div>
         </div>
       </article>
     </div>
@@ -122,7 +127,7 @@ const WorkList = defineAsyncComponent(() => import('../components/WorkList.vue')
     </div>
   </section>
   <section class="py-16 ">
-    <div class="flex flex-col items-center mx-auto w-full max-w-7xl  px-4 md:gap-12 md:px-8">
+    <div class="flex flex-col items-center mx-auto w-full max-w-7xl px-4 md:px-8">
       <SectionTitle class="mb-4">Work</SectionTitle>
       <span class="text-center text-[18px] leading-[156%] text-gray-600">Some of the noteworthy projects I have
         built:</span>

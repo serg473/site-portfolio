@@ -12,7 +12,7 @@ const isModal = ref(false)
                 <button class="md:hidden" @click="isModal = true">
                     <SvgIcon name="burger" />
                 </button>
-                <div class="flex items-center justify-between gap-12">
+                <div class="md:flex items-center justify-between gap-12 hidden">
                     <div>
                         <MenuList />
                     </div>
@@ -48,7 +48,7 @@ const isModal = ref(false)
                         <div class="flex items-center justify-between">
                             <p class="text-normal text-base">Switch Theme</p><button
                                 class="relative flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&amp;_svg]:stroke-gray-600 [&amp;_svg]:hover:stroke-gray-700 [&amp;_svg]:w-6 [&amp;_svg]:h-6">
-                                <SvgIcon name="Theme" />
+                                <SvgIcon name="ThemeNight" />
                             </button>
                         </div>
                         <button

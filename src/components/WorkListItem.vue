@@ -11,10 +11,10 @@ defineProps({
     <div
         class="rounded-xl mt-6 bg-gray shadow-md dark:bg-gray-100 dark:shadow-2xl mx-auto flex w-full max-w-6xl flex-col md:flex-row">
         <div
-            class="flex items-center justify-center border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12 md:rounded-l-xl md:border-r">
+            class="flex  border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12 md:rounded-l-xl md:border-r">
             <a target="_blank" :href="workItem?.link">
                 <img :src="getImagePath(workItem?.imageURL)" alt="Work" loading="lazy" decoding="async"
-                    class="h-[180px] rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105" </a>
+                    class="rounded-xl h-full shadow-lg transition-transform duration-500 md:hover:scale-105" </a>
         </div>
         <div class="mt-6 flex flex-col gap-6 p-8 md:w-1/2 lg:p-12">
             <p class="text-lg md:text-xl font-semibold text-gray-900">{{ workItem?.name }}</p>

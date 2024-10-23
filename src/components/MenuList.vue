@@ -8,7 +8,7 @@ const menuList = [
 ]
 </script>
 <template>
-    <ul class="flex list-none gap-6">
+    <ul class="flex flex-col md:flex-row list-none gap-6">
         <MenuListItem v-for="menuItem in menuList" :key="menuItem.name" :menuItem="{ ...menuItem }" />
     </ul>
 </template>
