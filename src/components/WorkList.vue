@@ -1,5 +1,5 @@
 <script setup>
-import { useStore } from '@/assets/img/portfolio';
+import { useStore } from '@/stores/portfolio';
 import WorkListItem from './WorkListItem.vue';
 const store = useStore();
 </script>

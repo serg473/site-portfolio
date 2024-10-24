@@ -12,7 +12,7 @@ defineProps({
         <a target="_blank" :href="skillItem?.link">
             <SvgIcon :name="skillItem?.name" />
         </a>
-        <span class="text-base leading-[150%] text-gray-600">{{ skillItem?.name }}</span>
+        <span class="text-base leading-[150%] text-gray-600 dark:text-[#D1D5DB]">{{ skillItem?.name }}</span>
     </div>
 </template>
 <style scoped lang="postcss">
