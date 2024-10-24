@@ -1,5 +1,7 @@
 <script setup>
 import { getImagePath } from "@/utils";
+import { useDark } from "@vueuse/core";
+const isDark = useDark();
 defineProps({
   workItem: {
     type: Object,
@@ -50,7 +52,7 @@ defineProps({
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          :stroke="isDark ? '#F5F5F5' : '#1f2937'"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"

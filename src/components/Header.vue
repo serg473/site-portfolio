@@ -6,7 +6,6 @@ import SvgIcon from "@/components/SvgIcon.vue";
 const isModal = ref(false);
 const isDark = useDark();
 const toogleDark = useToggle(isDark);
-console.log(isDark.value);
 </script>
 <template>
   <header class="dark:bg-[#030712]">
@@ -51,13 +50,13 @@ console.log(isDark.value);
       <TransitionGroup name="modal">
         <div
           v-if="isModal"
-          class="fixed bg-white z-50 shadow-2xl bg-gray ring-1 ring-black/10 transition-all ease-in-out duration-100 inset-y-0 right-0 h-full max-w-xs w-full"
+          class="fixed dark:bg-gray-950 bg-white z-50 shadow-2xl bg-gray ring-1 ring-black/10 transition-all ease-in-out duration-100 inset-y-0 right-0 h-full max-w-xs w-full"
         >
           <div
             class="flex items-center justify-between border-b border-gray-100 p-4"
           >
             <h3
-              class="text-2xl md:text-3xl tracking-[-0.02em] text-gray-900 font-bold"
+              class="text-2xl md:text-3xl tracking-[-0.02em] dark:text-neutral-100 text-gray-900 font-bold"
             >
               &lt;DS /&gt;
             </h3>
@@ -74,7 +73,7 @@ console.log(isDark.value);
           </div>
           <div class="flex flex-col gap-4 p-4">
             <div class="flex items-center justify-between">
-              <p class="text-normal text-base">Switch Theme</p>
+              <p class="text-normal dark:text-gray-300 text-base">Switch Theme</p>
               <button
                 class="relative flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&amp;_svg]:stroke-gray-600 [&amp;_svg]:hover:stroke-gray-700 [&amp;_svg]:w-6 [&amp;_svg]:h-6"
               >
@@ -92,7 +91,7 @@ console.log(isDark.value);
     </Teleport>
   </header>
 </template>
-<style scoped lang="postcss">
+<style lang="postcss">
 .modal-enter-active,
 .modal-leave-active {
   transition: all 0.5s ease;
